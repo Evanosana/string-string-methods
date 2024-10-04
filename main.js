@@ -28,6 +28,10 @@ resetButton.addEventListener("click", () => {
 })
 // Takes the value from the 3rd input element and sets that as the new string (this is not a new default and when you reset the string will be default again)
 insertNew.addEventListener("click", () => {
+    if(!inputNew.value){
+        console.log('plese insert a value');
+        return;
+    }
     string = inputNew.value;
     console.clear();
     console.log(`innitial string = '${string}'`);
@@ -37,7 +41,7 @@ insertNew.addEventListener("click", () => {
 // All 5 functions for the assignment
 sliceButton.addEventListener("click", () => {
     let newString = ''; // Create a variable for this loop
-    if(!input.value || !input.value){ // If there is no value, Return
+    if(!input.value){ // If there is no value, Return
         console.log('input the starting indecy and the ending indecy');
         return;
     }
